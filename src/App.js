@@ -1,18 +1,16 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarComp from './Components/NavbarComp';
-
-import React, { Component } from 'react';
-
+import "bootstrap/dist/css/bootstrap.min.css"
+import "./App.css"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Auth from "./Components/Auth"
 
 function App() {
   return (
-    <div className="App">
-      
-      <NavbarComp/>
-
-    </div>
-  );
+    <BrowserRouter>
+      <Routes>
+        <Route path="/auth" element={<Auth />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;
